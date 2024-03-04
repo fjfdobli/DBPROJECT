@@ -168,6 +168,7 @@ namespace DBPROJECT
             this.Controls.Add(this.tsTop);
             this.Controls.Add(this.menuMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuMain;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

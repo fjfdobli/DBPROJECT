@@ -77,8 +77,9 @@ namespace DBPROJECT
         private void editUserProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UserProfilefrm = new frmUserProfile(Globals.gIdUser, Globals.gLoginName);
+            UserProfilefrm.MdiParent = this;
             UserProfilefrm.FormClosed += UserProfilefrm_FormClosed;
-            UserProfilefrm.ShowDialog();
+            UserProfilefrm.Show();
         }
 
         private void UserProfilefrm_FormClosed(object sender, FormClosedEventArgs e)

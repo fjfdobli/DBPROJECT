@@ -306,5 +306,25 @@ namespace DBPROJECT
         {
             this.frmUserProfile_RefreshUser();
         }
+
+        private void cbxGender_TextChanged(object sender, EventArgs e)
+        {
+            this.btnSave.Enabled = true;
+        }
+
+        private void pkrBirthdate_KeyDown(object sender, KeyEventArgs e)
+        {
+            this.btnSave.Enabled = true;
+        }
+
+        private void pkrBirthdate_ValueChanged(object sender, EventArgs e)
+        {
+            this.btnSave.Enabled = true;
+        }
+
+        private void cbxGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
