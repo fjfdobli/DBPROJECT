@@ -57,7 +57,7 @@ namespace DBPROJECT
         {
             if (Globals.glOpenSqlConn())
             {
-                SqlCommand cmd = new SqlCommand("select photo from users where id=@liduser", Globals.sqlconn);
+                SqlCommand cmd = new SqlCommand("select isnull(photo, '') from users where id=@liduser", Globals.sqlconn);
                 cmd.Parameters.AddWithValue("@liduser", this.iduser);
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -173,11 +173,10 @@ namespace DBPROJECT
             {
                 if(Globals.glOpenSqlConn())
                 {
-                    SqlCommand cmd = new SqlCommand("spGetUserProfile", Globals.sqlconn);
+                    SqlCommand cmd = new SqlCommand("spClearUserPhoto", Globals.sqlconn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@liduser", this.iduser);
 
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
                     cmd.ExecuteNonQuery();
                     this.picBoxUser.Image = null;
                 }

@@ -204,7 +204,6 @@ namespace DBPROJECT
             // 
             // picBoxUser
             // 
-            this.picBoxUser.Image = global::DBPROJECT.Properties.Resources.group_png_3236;
             this.picBoxUser.Location = new System.Drawing.Point(39, 12);
             this.picBoxUser.Name = "picBoxUser";
             this.picBoxUser.Size = new System.Drawing.Size(262, 261);
