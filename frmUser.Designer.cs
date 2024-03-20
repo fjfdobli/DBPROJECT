@@ -54,6 +54,7 @@ namespace DBPROJECT
             this.dgvMain.Name = "dgvMain";
             this.dgvMain.Size = new System.Drawing.Size(776, 410);
             this.dgvMain.TabIndex = 0;
+            this.dgvMain.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMain_CellValueChanged);
             this.dgvMain.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvMain_RowPostPaint);
             this.dgvMain.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvMain_RowPrePaint);
             this.dgvMain.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvMain_UserDeletingRow);
